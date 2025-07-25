@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let precio = 100;
+        document.write("El precio es: " + precio);
+        document.write(`<br>`);
+        precio = 200;
+        document.write("El nuevo precio es: " + precio);
+        document.write(`<br>`);
+        const precioFijo = 300;
+        document.write("El precio fijo es: " + precioFijo);
+        document.write(`<br>`);
+        precioFijo = 400; // Esto causará un error porque no se puede cambiar el valor de una constante
+        document.write("El nuevo precio fijo es: " + precioFijo);
+    </script>
+</body>
+</html>

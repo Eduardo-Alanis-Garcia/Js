@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a, b, sum, res, mult, div, resid, poten;
+
+        // Pedir datos al usuario
+        a = parseInt(prompt("Ingrese el primer numero"));
+        b = parseInt(prompt("Ingrese el segundo numero"));
+
+        
+        // Suma
+        sum = a + b;  // Esto concatena los valores como cadenas, pero con parseInt se asegura que sea una suma numérica
+        // Resta
+        res = a - b;
+
+        // Multiplicacion
+        mult = a * b;
+
+        // Division
+        div = a / b;
+
+        // Modulo
+        resid = a % b;
+
+        // Potencia
+        poten = a ** b;
+
+
+        document.write("Suma: " + sum);
+        document.write("<br>");
+        document.write("Resta: " + res);
+        document.write("<br>");
+        document.write("Multiplicación: " + mult);
+        document.write("<br>");
+        document.write("División: " + div);
+        document.write("<br>");
+        document.write("Módulo: " + resid);
+        document.write("<br>");
+        document.write("Potencia: " + poten);
+    </script>
+</body>
+</html>
