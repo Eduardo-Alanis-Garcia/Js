@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let palabra = "JavaScript";
+        document.write("La palabra es: " + palabra + "<br>");
+
+        // Ver tamaño de la cadena
+        document.write("Tamaño de la cadena: " + palabra.length + "<br>");
+
+        // Ver caracteres específicos
+        document.write("Primeras 4 letras: " + palabra.slice(0,4) + "<br>");
+
+        // Ver caracteres especificos
+        document.write("Primeras 4 letras: " + palabra.substring(0,4) + "<br>");
+
+        // Cambiar valores en un texto
+        let saludo = "Hola a todos";
+        saludo = saludo.replace("Hola", "Adios");
+        document.write(saludo + "<br>");
+
+        // Poner en mayúsculas
+        document.write("En mayúsculas: " + palabra.toUpperCase() + "<br>");
+
+        // Poner en minúsculas
+        document.write("En minúsculas: " + palabra.toLowerCase() + "<br>");
+
+        // Unir texto
+        let palabra2 = "Curso de ";
+        document.write("Unir texto: " + palabra2.concat(palabra) + "<br>");
+
+
+        // Acortar espacios entre texto
+        let textoConEspacios = "   Hola      ";
+        document.write("Texto con espacios: '" + textoConEspacios + "'<br>");
+        document.write("Texto sin espacios izquierdos: '" + textoConEspacios.trimStart() + "'<br>");
+        document.write("Texto sin espacios derechos: '" + textoConEspacios.trimEnd() + "'<br>");
+        document.write("Texto sin espacios: '" + textoConEspacios.trim() + "'<br>");
+
+        // Cortar cantidad de caracteres
+        document.write("Cortar la palabra Script: " + palabra.split("Script") + "<br>");
+    </script>
+</body>
+</html>
