@@ -9,10 +9,25 @@
 <body>
     <h4> Seleccione disponibilidad de horario </h4>
     <form>
-
+        <input type="radio" id = "radio1" name = "horario"> Mañana <br>
+        <input type="radio" id = "radio2" name = "horario"> Tarde <br>
+        <input type="radio" id = "radio3" name = "horario"> Noche <br>
+        <br> <br>
+        <input type="button" value="Confirmar" onclick="seleccion()">
     </form>
     <script>
-        
+        function seleccion() {
+            if (document.getElementById("radio1").checked) {
+                swal("Horario de 8:00am a 12:00pm")
+            }
+            if (document.getElementById("radio2").checked) {
+                swal("Horario de 2:00pm a 6:00pm")
+            }
+            if (document.getElementById("radio3").checked) {
+                swal("Horario de 7:00pm a 11:00pm")
+            }     
+        }
+
     </script>
     
 </body>
