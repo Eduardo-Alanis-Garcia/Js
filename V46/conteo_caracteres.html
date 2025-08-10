@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <p> 
+        <textarea id = "Texto" rows="10" cols="35" maxlength="140"></textarea>
+
+        <p> Caracteres disponibles: 
+            <span id = "Cantidad"> 20 </span>
+        </p>
+    </p>
+
+    <script>
+        document.getElementById("Texto").addEventListener("keyup", caracteres);
+        function caracteres() {
+            let cant = document.getElementById("Texto").value.length;
+            let disponibles = 20 - parseInt(cant);
+            document.getElementById("Cantidad").innerHTML = disponibles;        // Esta actualiza el recuadro dentro del HTML
+
+            if (disponibles == 0) {
+                swal("Cantidad de caracteres agotados");
+                
+            }
+        }
+    </script>
+</body>
+</html>
