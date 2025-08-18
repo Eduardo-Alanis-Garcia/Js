@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mis_estilos.css">
+</head>
+<body onload="comenzar_reloj()">
+    <input type="number" id = "tiempo_elegido">
+    <button onclick="comenzar_tiempo()"> Alarma </button>
+    <h1 id="texto_alarma"> 00:00:00 </h1>
+    <audio id = "audio_alarma" >  <!-- Quitar lo de id = "audio_alarma" por unicamente con controls -->
+        <source src="alarma.mp3" type="audio/mpeg">
+        Sonido no habilitado
+        
+    </audio>
+    <script src="set_time_out.js"></script>
+</body>
+</html>
