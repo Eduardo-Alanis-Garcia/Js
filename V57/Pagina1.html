@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <div id="nombre"></div>
+    <script>
+        let miPersona = {
+            "nombre": "Eduardo",
+            "edad": 35,
+            "profesion": "Ingeniero de Software",
+            "direccion": {
+                "calle": "Avenida de la Innovación",
+                "numero": 123,
+                "ciudad": "Madrid",
+                "pais": "España"
+            },
+            "telefono": ["+34 612 345 678", "+34 698 765 432"]
+        };
+
+
+        let elementosTexto = document.getElementById("nombre");
+        elementosTexto.textContent = miPersona.nombre
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 2</title>
+</head>
+<body>
+    <div id = "nombre"></div>
+    <script>
+        let datosJson;
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "persona.json", true);
+        xhr.responseType = "json"
+        xhr.onload = function() {
+            if (xhr.status === 200) {  // Solicitud completado exitosamente
+                datosJson = xhr.response;
+                let elementosTexto = document.getElementById("nombre");
+                elementosTexto.textContent = datosJson.nombre;
+            } else{
+                console.log("Error")
+            }
+        }
+        xhr.send();
+
+    </script>
+</body>
+</html>
