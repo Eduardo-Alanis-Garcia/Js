@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Errores</title>
+</head>
+<body>
+    <!-- <script>
+        // Callbacks
+        function sumar(numero1, numero2, callback) {
+            setTimeout(function() {
+                if(typeof numero1 !== 'number' || typeof numero2 !== 'number') {
+                    return callback(new Error("Los parámetros deben ser números"));
+                }
+                callback(null, numero1 + numero2);
+            }, 1000);
+        }
+        sumar(12, 10, function(error, resultado) {
+            if(error) {
+                return console.log("Error:", error.message);
+            }
+            console.log("Resultado:", resultado);
+        });
+    </script> -->
+
+    <!-- <script>
+        // Promesas
+        function sumar(numero1, numero2) {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    if(typeof numero1 !== 'number' || typeof numero2 !== 'number') {
+                        return reject(new Error("Los parámetros deben ser números"));
+                    } else {
+                        resolve(numero1 + numero2);
+                    }
+                }, 1000);
+            });         
+        }
+
+        sumar(12,50).then(function(resultado) {
+                console.log("Resultado:", resultado);
+            }).catch(function(error) {
+                console.error("Error:", error);
+            });
+    </script> -->
+
+
+    <script>
+        // Async - Await
+        async function sumar(numero1, numero2) {
+            if(typeof numero1 !== 'number' || typeof numero2 !== 'number') {
+                throw new Error("Los parámetros deben ser números");
+            }
+            return numero1 + numero2;
+        }
+
+        async function manejoErrores() {
+            try {
+                let resultado = await sumar(20, 30);
+                console.log("Resultado:", resultado);
+            } catch(error) {
+                console.error("Error:", error.message);
+            }
+        }
+
+        manejoErrores();
+    </script>
+</body>
+</html>

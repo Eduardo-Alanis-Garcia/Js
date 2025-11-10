@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+</head>
+<body>
+    <!-- <script>
+        let miPromesa = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                let error = true; // Cambia esto a true para simular un error
+                if (error) {
+                    reject("La promesa ha sido rechazada");
+                }  else {
+                    resolve("La promesa se ha cumplido");
+                }
+            }, 5000);
+        });
+
+        miPromesa.then(function(resultado) {
+            console.log(resultado);
+        }).catch(function(error) {
+            console.log(error);
+        });
+
+    </script> -->
+
+    <!-- <script>
+        let promesa1 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve("Saludos a todos");
+            }, 5000);
+        });
+
+        let promesa2 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve("Otro saludo diferente");
+            }, 7000);
+        });
+
+        Promise.all([promesa1, promesa2]).then(function(valores) {  //Espera que todas las promesas se cumplan
+            console.log(valores[0] + "," + valores[1]);
+        });
+
+        console.log("El codigo sigue su curso");
+    </script> -->
+
+
+    <script>
+        function obtenerUsuarios(){
+            return new Promise(function(resolve, reject){
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        resolve(JSON.parse(xhr.responseText));
+                    } else {
+                        reject("Error al obtener los usuarios");
+                    }
+                };
+                xhr.send();
+            });
+        }
+
+        obtenerUsuarios().then(function(usuarios){
+            console.log(usuarios);
+        }).catch(function(error){
+            console.error(error);
+        });
+    </script>
+
+</body>
+</html>
